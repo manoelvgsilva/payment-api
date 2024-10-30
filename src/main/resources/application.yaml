@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    payment:
+      bootstrap-servers: kafka:29029
+      group-id: group_id
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+
+topic:
+  payment:payment
