@@ -1,11 +1,14 @@
 package com.app.payment.entity;
 
+import java.time.LocalDate;
+import java.util.Objects;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import java.time.LocalDate;
-import java.util.Objects;
 
+/**
+ * payment.
+ */
 @Document(collection = "payments")
 public class Payment {
 
@@ -18,6 +21,15 @@ public class Payment {
 
   public Payment() {}
 
+  /**
+   * payment.
+   *
+   * @param id the id
+   * @param saleId the saleid
+   * @param methodPayment the methodpayment
+   * @param datePayment the datepayment
+   * @param payValue the payvalue
+   */
   public Payment(ObjectId id, String saleId, String methodPayment,
                  LocalDate datePayment, String payValue) {
     this.id = id;
